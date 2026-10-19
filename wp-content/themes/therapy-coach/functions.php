@@ -24,6 +24,7 @@ require_once get_theme_file_path( 'inc/admin.php' );
 require_once get_theme_file_path( 'inc/theme-setup.php' );
 require_once get_theme_file_path( 'inc/register_block_patterns.php' );
 require_once get_theme_file_path( 'inc/assets-manager.php' );
+require_once get_theme_file_path( 'inc/athlete.php' );
 
 /**
  * Theme setup
@@ -46,7 +47,7 @@ function therapy_coach_enqueue_styles() {
 		'therapy-coach-style',
 		get_stylesheet_uri(),
 		array(),
-		wp_get_theme()->get( 'Version' )
+		filemtime( get_stylesheet_directory() . '/style.css' )
 	);
 }
 
@@ -107,7 +108,7 @@ add_filter( 'get_custom_logo', 'therapy_coach_get_custom_logo' );
  */
 function therapy_coach_default_tagline( $blogdescription ) {
 	if ( empty( trim( $blogdescription ) ) ) {
-		return __( 'Compassionate therapy and coaching for a calmer, more grounded life.', 'therapy-coach' );
+		return __( 'Uma trajetória de dedicação ao esporte e aos Jogos Olímpicos.', 'therapy-coach' );
 	}
 	return $blogdescription;
 }
@@ -117,6 +118,6 @@ add_filter( 'option_blogdescription', 'therapy_coach_default_tagline' );
  * Output skip-to-content link immediately after <body> opens.
  */
 function therapy_coach_skip_link() {
-	echo '<a class="skip-link screen-reader-text" href="#wp--skip-link--target">' . esc_html__( 'Skip to content', 'therapy-coach' ) . '</a>';
+	echo '<a class="skip-link screen-reader-text" href="#wp--skip-link--target">' . esc_html__( 'Pular para o conteúdo', 'therapy-coach' ) . '</a>';
 }
 add_action( 'wp_body_open', 'therapy_coach_skip_link' );

@@ -9,75 +9,75 @@
       "defaultPalette": false,
       "palette": [
         {
-			"slug": "primary",
-			"color": "#C27259",
-			"name": "Primary"
-		},
-		{
-			"slug": "primary-dark",
-			"color": "#9E5B3F",
-			"name": "Primary Dark"
-		},
-		{
-			"slug": "primary-light",
-			"color": "#D48B6E",
-			"name": "Primary Light"
-		},
-		{
-			"slug": "primary-soft",
-			"color": "#F5D9CE",
-			"name": "Primary Soft"
-		},
-		{
-			"slug": "heading-text",
-			"color": "#221812",
-			"name": "Text Dark"
-		},
-		{
-			"slug": "paragraph-text",
-			"color": "#62554E",
-			"name": "Text Light"
-		},
-		{
-			"slug": "muted-text",
-			"color": "#62554E",
-			"name": "Muted Text"
-		},
-		{
-			"slug": "white",
-			"color": "#ffffff",
-			"name": "White"
-		},
-		{
-			"slug": "background-light",
-			"color": "#F9F5F0",
-			"name": "Background Light"
-		},
-		{
-			"slug": "background-dark",
-			"color": "#F5EFE7",
-			"name": "Background Dark"
-		},
-		{
-			"slug": "mist",
-			"color": "#E2EBF0",
-			"name": "Mist"
-		},
-		{
-			"slug": "rule",
-			"color": "#EADFD2",
-			"name": "Border"
-		},
-		{
-			"slug": "gradient-start",
-			"color": "#F9D9C4",
-			"name": "Gradient Start"
-		},
-		{
-			"slug": "gradient-end",
-			"color": "#FBF6F1",
-			"name": "Gradient End"
-		}
+          "slug": "primary",
+          "color": "#17614B",
+          "name": "Primary"
+        },
+        {
+          "slug": "primary-dark",
+          "color": "#104936",
+          "name": "Primary Dark"
+        },
+        {
+          "slug": "primary-light",
+          "color": "#407B65",
+          "name": "Primary Light"
+        },
+        {
+          "slug": "primary-soft",
+          "color": "#E2EBDF",
+          "name": "Primary Soft"
+        },
+        {
+          "slug": "heading-text",
+          "color": "#142A36",
+          "name": "Text Dark"
+        },
+        {
+          "slug": "paragraph-text",
+          "color": "#4B5C61",
+          "name": "Text Light"
+        },
+        {
+          "slug": "muted-text",
+          "color": "#4B5C61",
+          "name": "Muted Text"
+        },
+        {
+          "slug": "white",
+          "color": "#FFFFFF",
+          "name": "White"
+        },
+        {
+          "slug": "background-light",
+          "color": "#F8F9F4",
+          "name": "Background Light"
+        },
+        {
+          "slug": "background-dark",
+          "color": "#EEF2E9",
+          "name": "Background Dark"
+        },
+        {
+          "slug": "mist",
+          "color": "#E7EEED",
+          "name": "Mist"
+        },
+        {
+          "slug": "rule",
+          "color": "#D7DFD8",
+          "name": "Border"
+        },
+        {
+          "slug": "gradient-start",
+          "color": "#E2EBDF",
+          "name": "Gradient Start"
+        },
+        {
+          "slug": "gradient-end",
+          "color": "#F8F9F4",
+          "name": "Gradient End"
+        }
       ]
     },
     "layout": {
@@ -129,7 +129,8 @@
         "em",
         "rem",
         "vh",
-        "vw"
+        "vw",
+        "svh"
       ]
     },
     "typography": {
@@ -146,13 +147,17 @@
               "fontFamily": "Work Sans",
               "fontWeight": "400",
               "fontStyle": "normal",
-              "src": [ "file:./assets/fonts/work-sans/WorkSans-Regular.ttf" ]
+              "src": [
+                "file:./assets/fonts/work-sans/WorkSans-Regular.ttf"
+              ]
             },
             {
               "fontFamily": "Work Sans",
               "fontWeight": "500",
               "fontStyle": "normal",
-              "src": [ "file:./assets/fonts/work-sans/WorkSans-Medium.ttf" ]
+              "src": [
+                "file:./assets/fonts/work-sans/WorkSans-Medium.ttf"
+              ]
             }
           ]
         },
@@ -165,13 +170,17 @@
               "fontFamily": "Playfair Display",
               "fontWeight": "400",
               "fontStyle": "normal",
-              "src": [ "file:./assets/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf" ]
+              "src": [
+                "file:./assets/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf"
+              ]
             },
             {
               "fontFamily": "Playfair Display",
               "fontWeight": "500",
               "fontStyle": "normal",
-              "src": [ "file:./assets/fonts/Playfair_Display/PlayfairDisplay-Medium.ttf" ]
+              "src": [
+                "file:./assets/fonts/Playfair_Display/PlayfairDisplay-Medium.ttf"
+              ]
             }
           ]
         }
