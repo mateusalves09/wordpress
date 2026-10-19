@@ -1,0 +1,538 @@
+# Copyright (C) 2026 WPEverest
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Therapy Coach 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/therapy-coach\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-07-02T07:43:42+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: therapy-coach\n"
+
+#. Theme Name of the theme
+#: style.css
+#: inc/register_block_patterns.php:28
+msgid "Therapy Coach"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Therapy Coach is a calm, modern WordPress block theme built for therapists, counselors, and life coaches. Powered by Full Site Editing and seamlessly integrated with the AllCoach plugin, it gives you everything needed to present your practice with warmth and clarity — showcase your programs and credentials, offer free discovery calls, accept bookings and session appointments, and guide clients through structured activities. With a soothing color palette, elegant Playfair Display and Work Sans typography, ready-made block patterns, and multiple color variations, Therapy Coach helps independent practitioners and wellness studios launch a professional, trustworthy online presence that grows with them."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "WPEverest"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://wpeverest.com/"
+msgstr ""
+
+#: functions.php:110
+msgid "Compassionate therapy and coaching for a calmer, more grounded life."
+msgstr ""
+
+#: functions.php:120
+msgid "Skip to content"
+msgstr ""
+
+#: inc/admin.php:98
+msgid "Activating"
+msgstr ""
+
+#: inc/admin.php:99
+msgid "Installing"
+msgstr ""
+
+#: inc/admin.php:100
+msgid "Done"
+msgstr ""
+
+#: inc/admin.php:105
+#: inc/admin.php:141
+msgid "Dismiss"
+msgstr ""
+
+#: inc/admin.php:111
+msgid "This theme works best with AllCoach"
+msgstr ""
+
+#. translators: %s: AllCoach
+#: inc/admin.php:116
+#, php-format
+msgid "Run Your Therapy & Coaching Practice with %s"
+msgstr ""
+
+#: inc/admin.php:119
+msgid "The all-in-one plugin for therapists and coaches. Programs, session booking, client portals, and checkout — all free, all from your WordPress dashboard."
+msgstr ""
+
+#: inc/admin.php:120
+msgid "All-in-one practice platform"
+msgstr ""
+
+#: inc/admin.php:120
+msgid "programs, bookings, payments, and a client portal built into WordPress"
+msgstr ""
+
+#: inc/admin.php:121
+msgid "Google Meet auto-generated"
+msgstr ""
+
+#: inc/admin.php:121
+msgid "session links created instantly, no manual work"
+msgstr ""
+
+#: inc/admin.php:122
+msgid "Sell programs directly"
+msgstr ""
+
+#: inc/admin.php:122
+msgid "built-in checkout, no WooCommerce or external store needed"
+msgstr ""
+
+#. translators: %s: AllCoach
+#: inc/admin.php:130
+#, php-format
+msgid "Activate %s"
+msgstr ""
+
+#. translators: %s: AllCoach
+#: inc/admin.php:132
+#, php-format
+msgid "Install & Activate %s"
+msgstr ""
+
+#: inc/admin.php:137
+msgid "Learn More"
+msgstr ""
+
+#: inc/admin.php:146
+msgid "AllCoach preview"
+msgstr ""
+
+#: patterns/pattern-404.php
+msgctxt "Pattern title"
+msgid "404"
+msgstr ""
+
+#: patterns/pattern-about-approach.php
+msgctxt "Pattern title"
+msgid "About – Approach"
+msgstr ""
+
+#: patterns/pattern-about-credentials.php
+msgctxt "Pattern title"
+msgid "About – Credentials"
+msgstr ""
+
+#: patterns/pattern-about-intro.php
+msgctxt "Pattern title"
+msgid "About – Intro"
+msgstr ""
+
+#: patterns/pattern-about-story.php
+msgctxt "Pattern title"
+msgid "About – Story & Philosophy"
+msgstr ""
+
+#: patterns/pattern-about-values.php
+msgctxt "Pattern title"
+msgid "About – Values"
+msgstr ""
+
+#: patterns/pattern-about.php
+msgctxt "Pattern title"
+msgid "About – Coach Bio"
+msgstr ""
+
+#: patterns/pattern-archive.php
+msgctxt "Pattern title"
+msgid "Archive"
+msgstr ""
+
+#: patterns/pattern-badges.php
+msgctxt "Pattern title"
+msgid "Trust Badges"
+msgstr ""
+
+#: patterns/pattern-blog.php
+msgctxt "Pattern title"
+msgid "Blog / Resources"
+msgstr ""
+
+#: patterns/pattern-credentials.php
+msgctxt "Pattern title"
+msgid "Credentials"
+msgstr ""
+
+#: patterns/pattern-cta.php
+msgctxt "Pattern title"
+msgid "CTA – Book Discovery Call"
+msgstr ""
+
+#: patterns/pattern-dashboard.php
+msgctxt "Pattern title"
+msgid "Dashboard Preview"
+msgstr ""
+
+#: patterns/pattern-faq.php
+msgctxt "Pattern title"
+msgid "FAQ"
+msgstr ""
+
+#: patterns/pattern-footer.php
+msgctxt "Pattern title"
+msgid "Footer"
+msgstr ""
+
+#: patterns/pattern-header.php
+msgctxt "Pattern title"
+msgid "Header"
+msgstr ""
+
+#: patterns/pattern-hero.php
+msgctxt "Pattern title"
+msgid "Hero"
+msgstr ""
+
+#: patterns/pattern-how-it-works.php
+msgctxt "Pattern title"
+msgid "How It Works"
+msgstr ""
+
+#: patterns/pattern-program-curriculum.php
+msgctxt "Pattern title"
+msgid "Program – Curriculum"
+msgstr ""
+
+#: patterns/pattern-program-fit.php
+msgctxt "Pattern title"
+msgid "Program – Fit & Inclusions"
+msgstr ""
+
+#: patterns/pattern-program-single.php
+msgctxt "Pattern title"
+msgid "Program – Single"
+msgstr ""
+
+#: patterns/pattern-programs-listing.php
+msgctxt "Pattern title"
+msgid "Programs – Listing"
+msgstr ""
+
+#: patterns/pattern-programs.php
+msgctxt "Pattern title"
+msgid "Featured Programs"
+msgstr ""
+
+#: patterns/pattern-resources-hero.php
+msgctxt "Pattern title"
+msgid "Resources – Hero"
+msgstr ""
+
+#: patterns/pattern-results.php
+msgctxt "Pattern title"
+msgid "Client Results"
+msgstr ""
+
+#: patterns/pattern-services.php
+msgctxt "Pattern title"
+msgid "Services – Areas of Support"
+msgstr ""
+
+#: theme.json
+#: styles/colors/01-Crimson.json
+#: styles/colors/02-Ocean Blue.json
+#: styles/colors/03-Forest Green.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+#: styles/colors/01-Crimson.json
+#: styles/colors/02-Ocean Blue.json
+#: styles/colors/03-Forest Green.json
+msgctxt "Color name"
+msgid "Primary Dark"
+msgstr ""
+
+#: theme.json
+#: styles/colors/01-Crimson.json
+#: styles/colors/02-Ocean Blue.json
+#: styles/colors/03-Forest Green.json
+msgctxt "Color name"
+msgid "Primary Light"
+msgstr ""
+
+#: theme.json
+#: styles/colors/01-Crimson.json
+#: styles/colors/02-Ocean Blue.json
+#: styles/colors/03-Forest Green.json
+msgctxt "Color name"
+msgid "Primary Soft"
+msgstr ""
+
+#: theme.json
+#: styles/colors/01-Crimson.json
+#: styles/colors/02-Ocean Blue.json
+#: styles/colors/03-Forest Green.json
+msgctxt "Color name"
+msgid "Text Dark"
+msgstr ""
+
+#: theme.json
+#: styles/colors/01-Crimson.json
+#: styles/colors/02-Ocean Blue.json
+#: styles/colors/03-Forest Green.json
+msgctxt "Color name"
+msgid "Text Light"
+msgstr ""
+
+#: theme.json
+#: styles/colors/01-Crimson.json
+#: styles/colors/02-Ocean Blue.json
+#: styles/colors/03-Forest Green.json
+msgctxt "Color name"
+msgid "Muted Text"
+msgstr ""
+
+#: theme.json
+#: styles/colors/01-Crimson.json
+#: styles/colors/02-Ocean Blue.json
+#: styles/colors/03-Forest Green.json
+msgctxt "Color name"
+msgid "White"
+msgstr ""
+
+#: theme.json
+#: styles/colors/01-Crimson.json
+#: styles/colors/02-Ocean Blue.json
+#: styles/colors/03-Forest Green.json
+msgctxt "Color name"
+msgid "Background Light"
+msgstr ""
+
+#: theme.json
+#: styles/colors/01-Crimson.json
+#: styles/colors/02-Ocean Blue.json
+#: styles/colors/03-Forest Green.json
+msgctxt "Color name"
+msgid "Background Dark"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Mist"
+msgstr ""
+
+#: theme.json
+#: styles/colors/01-Crimson.json
+#: styles/colors/02-Ocean Blue.json
+#: styles/colors/03-Forest Green.json
+msgctxt "Color name"
+msgid "Border"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Gradient Start"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Gradient End"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Tiny"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Regular"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XX-Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Work Sans"
+msgstr ""
+
+#: theme.json
+#: styles/typography/typography-preset-1.json
+msgctxt "Font family name"
+msgid "Playfair Display"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Display XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Display LG"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading MD"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading SM"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Body LG"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Body MD"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Body SM"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Caption"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Button"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header Style 2"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header With Large Title"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Vertical Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page No Title"
+msgstr ""
+
+#: styles/colors/01-Crimson.json
+msgctxt "Style variation name"
+msgid "Crimson"
+msgstr ""
+
+#: styles/colors/02-Ocean Blue.json
+msgctxt "Style variation name"
+msgid "Ocean Blue"
+msgstr ""
+
+#: styles/colors/03-Forest Green.json
+msgctxt "Style variation name"
+msgid "Forest Green"
+msgstr ""
+
+#: styles/typography/typography-preset-1.json
+msgctxt "Style variation name"
+msgid "Playfair Display & Segoe UI"
+msgstr ""
+
+#: styles/typography/typography-preset-1.json
+msgctxt "Font family name"
+msgid "Segoe UI"
+msgstr ""
+
+#: styles/typography/typography-preset-2.json
+msgctxt "Style variation name"
+msgid "Manrope & Lato"
+msgstr ""
+
+#: styles/typography/typography-preset-2.json
+msgctxt "Font family name"
+msgid "Lato"
+msgstr ""
+
+#: styles/typography/typography-preset-3.json
+msgctxt "Style variation name"
+msgid "Libre Baskerville & DM Sans"
+msgstr ""
+
+#: styles/typography/typography-preset-3.json
+msgctxt "Font family name"
+msgid "Libre Baskerville"
+msgstr ""
+
+#: styles/typography/typography-preset-3.json
+msgctxt "Font family name"
+msgid "DM Sans"
+msgstr ""
+
+#: styles/typography/typography-preset-4.json
+msgctxt "Style variation name"
+msgid "Urbanist & Nunito Sans"
+msgstr ""
+
+#: styles/typography/typography-preset-4.json
+msgctxt "Font family name"
+msgid "Urbanist"
+msgstr ""
+
+#: styles/typography/typography-preset-4.json
+msgctxt "Font family name"
+msgid "Nunito Sans"
+msgstr ""
