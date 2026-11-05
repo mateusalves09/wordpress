@@ -166,3 +166,22 @@ html{scroll-behavior:smooth;scroll-padding-top:110px}
 }
 @media(max-width:600px){.admin-bar.athlete-theme .wp-site-blocks>header{top:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.athlete-button,.athlete-nav a{transition:none}.athlete-button:hover{transform:none}}
+
+/* Usain Bolt — composição editorial sem fotografias. */
+:root{--athlete-ink:#102d27;--athlete-green:#146044;--athlete-paper:#faf9f3;--athlete-gold:#bb8a18}
+.athlete-header{background:#faf9f3ed;backdrop-filter:blur(16px)}
+.athlete-hero{padding:82px 0 76px;background:radial-gradient(ellipse at 85% 25%,#e8edce 0,transparent 55%)}
+.athlete-hero-grid{gap:64px}.athlete-main h1{font-size:clamp(68px,8.6vw,126px);font-weight:700;letter-spacing:-.08em;line-height:.95}
+.athlete-kicker{font-size:15px}.athlete-intro{font-size:17px}.athlete-button{border-radius:100px;padding:17px 26px;box-shadow:0 8px 24px #14604418}
+.bolt-record-art{min-height:470px;border-radius:120px 16px 120px 16px;background:#123d30;position:relative;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;padding:35px;color:#f8edbc;box-shadow:18px 20px 0 #e4e6cf;animation:bolt-enter .9s ease both}
+.bolt-record-art:before{content:"";position:absolute;inset:-60%;background:repeating-linear-gradient(115deg,transparent 0 46px,#e5c55d26 47px 48px,transparent 49px 85px);transform:rotate(-8deg);z-index:-1}
+.bolt-art-label,.bolt-art-footer{font-size:10px;letter-spacing:.18em;position:relative}.bolt-art-footer{border-top:1px solid #ffffff30;padding-top:18px}
+.bolt-lightning{position:absolute;right:5px;top:-70px;font:440px/1 Georgia,serif;color:#e9cd57;opacity:.3;transform:rotate(12deg)}
+.bolt-record{position:relative;display:flex;flex-direction:column;gap:8px}.bolt-record strong{font-size:clamp(80px,9vw,132px);font-weight:500;letter-spacing:-.09em;line-height:1}.bolt-record strong span{font-size:35px;margin-left:10px}.bolt-record>span{font-size:11px;letter-spacing:.16em}
+.athlete-stat-strip{background:#102d27}.athlete-stats dd{color:#f1d675}.athlete-section{padding-block:95px}.athlete-profile{border-radius:20px;box-shadow:0 15px 45px #102d2708}
+.athlete-achievements article{border-radius:18px;transition:transform .25s ease,box-shadow .25s ease}.athlete-achievements article:hover{transform:translateY(-5px);box-shadow:0 16px 38px #102d2710}
+.athlete-timeline-section{background:#eff1e7}.athlete-timeline-copy{transition:transform .25s ease}.athlete-timeline li:hover .athlete-timeline-copy{transform:translateX(5px)}
+.athlete-hero-copy{animation:bolt-enter .75s ease both}.athlete-stat-strip{animation:bolt-enter 1s ease both}
+@keyframes bolt-enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:780px){.athlete-hero{padding-block:44px}.athlete-hero-grid{grid-template-columns:1fr;gap:40px}.bolt-record-art{min-height:340px;max-width:540px;width:100%;margin:auto;box-shadow:8px 10px 0 #e4e6cf}.bolt-record strong{font-size:100px}.athlete-section{padding-block:60px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.athlete-main *,.athlete-header *{animation:none!important;transition:none!important}.athlete-achievements article:hover,.athlete-timeline li:hover .athlete-timeline-copy{transform:none}}

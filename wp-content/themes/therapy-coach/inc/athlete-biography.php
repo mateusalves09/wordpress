@@ -8,26 +8,19 @@ $portrait = therapy_coach_athlete_image_url( $athlete['foto'] );
 		<div class="athlete-container athlete-hero-grid">
 			<div class="athlete-hero-copy">
 				<p class="athlete-eyebrow"><span class="athlete-status" aria-hidden="true"></span> ESPORTE · HISTÓRIA · LEGADO</p>
-				<p class="athlete-kicker">Uma vida dedicada ao esporte.</p>
+				<p class="athlete-kicker">O homem que redefiniu a velocidade.</p>
 				<h1 id="athlete-name"><?php echo esc_html( $athlete['nome'] ); ?></h1>
 				<p class="athlete-discipline"><?php echo esc_html( $athlete['modalidade'] ); ?> <span aria-hidden="true">/</span> <?php echo esc_html( $athlete['pais'] ); ?></p>
 				<p class="athlete-intro"><?php echo esc_html( $athlete['resumo'] ); ?></p>
 				<div class="athlete-actions"><a class="athlete-button" href="#biografia">Conheça a história <span aria-hidden="true">↗</span></a><a class="athlete-text-link" href="#conquistas">Ver conquistas <span aria-hidden="true">↓</span></a></div>
 				<div class="athlete-hero-bottom"><span class="athlete-mini-line" aria-hidden="true"></span><span>O caminho até os Jogos Olímpicos</span></div>
 			</div>
-			<figure class="athlete-portrait">
-				<div class="athlete-portrait-art">
-					<span class="athlete-photo-label">PERFIL DO ATLETA</span>
-					<?php if ( $portrait ) : ?>
-						<img class="athlete-real-portrait" src="<?php echo $portrait; ?>" alt="<?php echo esc_attr( $athlete['foto_descricao'] ); ?>" width="800" height="1000" fetchpriority="high" />
-					<?php else : ?>
-						<img class="athlete-placeholder-art" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/athlete-placeholder.svg' ) ); ?>" alt="Espaço reservado para a fotografia do atleta" width="800" height="1000" fetchpriority="high" />
-						<span class="athlete-photo-hint">SUA FOTO AQUI <span aria-hidden="true">↗</span></span>
-					<?php endif; ?>
-					<span class="athlete-portrait-tag"><?php echo esc_html( $athlete['modalidade'] ); ?></span>
-				</div>
-				<figcaption><?php echo $portrait ? esc_html( $athlete['foto_credito'] ) : 'Uma história que merece ser contada.'; ?></figcaption>
-			</figure>
+            <aside class="bolt-record-art" aria-label="Recorde mundial dos 100 metros: 9,58 segundos, Berlim 2009">
+                <span class="bolt-art-label">VELOCIDADE QUE FEZ HISTÓRIA</span>
+                <span class="bolt-lightning" aria-hidden="true">ϟ</span>
+                <div class="bolt-record"><strong>9,58<span>s</span></strong><span>100 METROS · BERLIM, 2009</span></div>
+                <span class="bolt-art-footer">JAMAICA / PARA O MUNDO ↗</span>
+            </aside>
 		</div>
 	</section>
 	<div class="athlete-stat-strip"><dl class="athlete-container athlete-stats">
@@ -70,20 +63,7 @@ $portrait = therapy_coach_athlete_image_url( $athlete['foto'] );
 		</div>
 	</section>
 
-	<section id="galeria" class="athlete-gallery-section" aria-labelledby="galeria-title"><div class="athlete-section athlete-container">
-		<div class="athlete-section-heading"><p class="athlete-eyebrow">04 / GALERIA</p><h2 id="galeria-title">Instantes de uma jornada.</h2></div>
-		<div class="athlete-gallery">
-			<?php foreach ( $athlete['galeria'] as $index => $photo ) : $url = therapy_coach_athlete_image_url( $photo['foto'] ); ?>
-			<figure>
-				<?php if ( $url ) : ?><img src="<?php echo $url; ?>" alt="<?php echo esc_attr( $photo['descricao'] ); ?>" loading="lazy" width="800" height="600" />
-				<?php else : ?><div class="athlete-gallery-empty" role="img" aria-label="Espaço reservado para fotografia"><span class="athlete-gallery-cross" aria-hidden="true">+</span><span>FOTO <?php echo esc_html( sprintf( '%02d', $index + 1 ) ); ?></span><small>Um momento para recordar</small></div><?php endif; ?>
-				<figcaption><strong><?php echo esc_html( $photo['legenda'] ); ?></strong><?php if ( $url ) : ?><span><?php echo esc_html( $photo['credito'] ); ?></span><?php endif; ?></figcaption>
-			</figure>
-			<?php endforeach; ?>
-		</div>
-	</div></section>
-
-	<section id="legado" class="athlete-section athlete-container athlete-legacy" aria-labelledby="legado-title"><div><p class="athlete-eyebrow">05 / LEGADO</p><h2 id="legado-title">O esporte inspira.<br />A história permanece.</h2></div><div class="athlete-prose"><p><?php echo esc_html( $athlete['legado'] ); ?></p><a class="athlete-text-link" href="#athlete-name">Voltar ao início <span aria-hidden="true">↑</span></a></div></section>
+	<section id="legado" class="athlete-section athlete-container athlete-legacy" aria-labelledby="legado-title"><div><p class="athlete-eyebrow">04 / LEGADO</p><h2 id="legado-title">O esporte inspira.<br />A história permanece.</h2></div><div class="athlete-prose"><p><?php echo esc_html( $athlete['legado'] ); ?></p><a class="athlete-text-link" href="#athlete-name">Voltar ao início <span aria-hidden="true">↑</span></a></div></section>
 
 	<section id="fontes" class="athlete-sources" aria-labelledby="fontes-title"><div class="athlete-container"><h2 id="fontes-title">Fontes e referências</h2><p>Referências utilizadas na pesquisa desta biografia.</p><ul>
 		<?php foreach ( $athlete['fontes'] as $source ) : $source_url = esc_url( $source['url'], array( 'http', 'https' ) ); ?><li><?php if ( $source_url ) : ?><a href="<?php echo $source_url; ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $source['titulo'] ); ?> <span aria-label="abre em nova aba">↗</span></a><?php else : ?><span><?php echo esc_html( $source['titulo'] ); ?></span><?php endif; ?><small>Acesso: <?php echo esc_html( $source['acesso'] ); ?></small></li><?php endforeach; ?>
