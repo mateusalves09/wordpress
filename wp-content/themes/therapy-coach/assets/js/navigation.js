@@ -31,3 +31,52 @@ document.addEventListener('DOMContentLoaded', function () {
   function resetOnResize() { closeMenu(); }
   if (mobile.addEventListener) mobile.addEventListener('change', resetOnResize);
 });
+
+/** Revelação única: sem listeners de rolagem, bibliotecas ou ciclos contínuos. */
+document.addEventListener('DOMContentLoaded', function () {
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (motion.matches || !('IntersectionObserver' in window)) return;
+
+  const elements = document.querySelectorAll(
+    '.athlete-hero-copy, .athlete-portrait, .bolt-record-art, .athlete-section-heading, ' +
+    '.athlete-bio-grid > *, .athlete-timeline li, .athlete-medal, ' +
+    '.athlete-achievements article, .athlete-gallery figure, .athlete-legacy > *'
+  );
+  let remaining = elements.length;
+  if (!remaining) return;
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      const element = entry.target;
+      // Sem ocultar conteúdo previamente: falhas de JS não deixam áreas vazias.
+      element.classList.add('athlete-enter');
+      element.addEventListener('animationend', function () {
+        element.classList.remove('athlete-enter');
+        element.style.removeProperty('--athlete-delay');
+      }, { once: true });
+      observer.unobserve(element);
+      remaining -= 1;
+    });
+    if (!remaining) observer.disconnect();
+  }, { threshold: 0, rootMargin: '0px 0px -32px 0px' });
+
+  elements.forEach(function (element) {
+    const parent = element.parentElement;
+    if (parent.matches('.athlete-timeline, .athlete-medals, .athlete-achievements, .athlete-gallery')) {
+      const index = Array.prototype.indexOf.call(parent.children, element);
+      element.style.setProperty('--athlete-delay', (index % 4) * 60 + 'ms');
+    }
+    observer.observe(element);
+  });
+
+  function stopMotion(event) {
+    if (!event.matches) return;
+    observer.disconnect();
+    elements.forEach(function (element) {
+      element.classList.remove('athlete-enter');
+      element.style.removeProperty('--athlete-delay');
+    });
+  }
+  if (motion.addEventListener) motion.addEventListener('change', stopMotion);
+});
