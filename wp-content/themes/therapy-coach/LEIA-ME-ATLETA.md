@@ -103,3 +103,31 @@ Para outras páginas, ajuste também o título e a descrição do site em
 Esta entrega modifica os arquivos do projeto. A ativação e a visualização na sua
 instância da AWS dependem de copiar a pasta e seguir as etapas acima.
 Como esta é uma adaptação direta, guarde uma cópia antes de atualizar o tema original.
+
+## 7. Subtelas e interações do perfil
+
+O nome exibido agora é **Eduard Bolt**. Os demais dados foram preservados.
+A página inicial apresenta uma visão geral e cartões para quatro subtelas:
+
+- `?perfil=biografia`: biografia e ficha do atleta.
+- `?perfil=trajetoria`: linha do tempo com filtros por ano e capítulos expansíveis.
+- `?perfil=conquistas`: medalhas e detalhes expansíveis das marcas.
+- `?perfil=legado`: legado e perguntas com links para continuar explorando.
+
+Esses parâmetros são acrescentados ao endereço inicial do WordPress. Os links
+são gerados automaticamente pelo tema; não é necessário criar páginas no painel,
+ativar plugins ou salvar novamente os permalinks. Links diretos, recarregamento e
+os botões voltar/avançar do navegador funcionam em cada subtela. Um parâmetro
+inválido retorna à visão geral.
+
+O botão de compartilhar copia o endereço da tela atual. Se o navegador não
+permitir a cópia, um campo com o link aparece para cópia manual. Sem JavaScript,
+os links entre telas e os detalhes expansíveis continuam funcionando; os filtros
+e o botão de copiar são ocultados. As animações respeitam a redução de movimento.
+
+A composição principal usa o bloco dinâmico `therapy-coach/athlete-profile`,
+registrado em `inc/athlete.php`. As telas ficam em `inc/screens/` e continuam
+lendo `dados-atleta.php` a cada requisição. A galeria não está presente nesta
+versão do perfil. Se houver uma cópia antiga do HTML salva no Editor do site,
+restaure apenas o modelo inicial e as partes necessárias conforme a seção 5,
+preservando suas personalizações antes de restaurar.

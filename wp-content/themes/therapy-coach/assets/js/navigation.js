@@ -80,3 +80,56 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   if (motion.addEventListener) motion.addEventListener('change', stopMotion);
 });
+
+/** Filtros locais e compartilhamento; o conteúdo não depende destes controles. */
+document.addEventListener('DOMContentLoaded', function () {
+  const controls = document.querySelector('[data-timeline-controls]');
+  if (controls) {
+    const items = document.querySelectorAll('[data-timeline-year]');
+    const buttons = controls.querySelectorAll('[data-year-filter]');
+    const count = controls.querySelector('[data-timeline-count]');
+    function filterYear(year) {
+      let total = 0;
+      items.forEach(function (item) {
+        item.hidden = year !== 'all' && item.dataset.timelineYear !== year;
+        if (!item.hidden) {
+          total += 1;
+          if (year !== 'all') item.querySelector('details').open = true;
+        }
+      });
+      buttons.forEach(function (button) {
+        button.setAttribute('aria-pressed', String(button.dataset.yearFilter === year));
+      });
+      count.textContent = total + (total === 1 ? ' momento' : ' momentos') + (year === 'all' ? ' na trajetória' : ' em ' + year);
+    }
+    controls.hidden = false;
+    filterYear('all');
+    controls.addEventListener('click', function (event) {
+      const button = event.target.closest('[data-year-filter]');
+      if (button && controls.contains(button)) filterYear(button.dataset.yearFilter);
+    });
+  }
+
+  const share = document.querySelector('[data-athlete-share]');
+  if (share) {
+    const status = document.querySelector('[data-share-status]');
+    const fallback = document.querySelector('[data-share-link]');
+    share.hidden = false;
+    share.addEventListener('click', async function () {
+      const url = new URL(window.location.href);
+      url.hash = '';
+      try {
+        if (!navigator.clipboard) throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText(url.href);
+        status.textContent = 'Link copiado. Pronto para compartilhar!';
+        fallback.hidden = true;
+      } catch (_) {
+        fallback.value = url.href;
+        fallback.hidden = false;
+        fallback.focus();
+        fallback.select();
+        status.textContent = 'Selecione e copie o link abaixo.';
+      }
+    });
+  }
+});
