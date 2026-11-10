@@ -133,3 +133,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+/** Ao seguir uma âncora, a próxima tecla Tab continua a partir do destino. */
+document.addEventListener('click', function (event) {
+  if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  const link = event.target.closest('a[href]');
+  if (!link || link.target === '_blank' || link.hasAttribute('download')) return;
+  const url = new URL(link.href, window.location.href);
+  if (url.origin !== location.origin || url.pathname !== location.pathname || url.search !== location.search || !url.hash) return;
+  let target;
+  try { target = document.getElementById(decodeURIComponent(url.hash.slice(1))); } catch (_) { return; }
+  if (!target || !target.matches('main, section')) return;
+  // A navegação nativa do WordPress fecha o menu antes da transferência de foco.
+  setTimeout(function () {
+    target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+  }, 0);
+});

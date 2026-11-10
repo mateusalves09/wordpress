@@ -1,0 +1,135 @@
+/* WCAG 2.2 AA: reflow, readable text, visible focus and usable targets.
+ * Shared by the site and the block editor; no fixed heights for text content. */
+.athlete-main,
+.athlete-header,
+.athlete-footer {
+ font-size: 1rem;
+ line-height: 1.65;
+ overflow-wrap: anywhere;
+}
+.athlete-container {
+ box-sizing: border-box;
+ width: min(77.5rem, calc(100% - clamp(2rem, 6vw, 7rem)));
+ max-width: 100%;
+ margin-inline: auto;
+}
+/* An expanding or zoomed header must never cover content or keyboard focus. */
+.athlete-theme .wp-site-blocks > header { position: static; }
+.athlete-header-inner { flex-wrap: wrap; gap: 1rem 2rem; padding-block: 1rem; }
+.athlete-header-inner > *,
+.athlete-main .wp-block-group,
+.athlete-footer .wp-block-group { min-width: 0; }
+.athlete-hero { padding-block: clamp(2rem, 6vw, 4.5rem); }
+.athlete-hero-grid { grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: clamp(2rem, 5vw, 5rem); }
+.athlete-bio-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2rem, 5vw, 5rem); margin-top: 2rem; }
+.athlete-section { padding-block: clamp(2.5rem, 7vw, 6.5rem); }
+.athlete-main h1 { font-size: clamp(2.5rem, 1.5rem + 5vw, 5.75rem); line-height: 1.15; }
+.athlete-main h2 { font-size: clamp(2rem, 1.5rem + 2vw, 3.5rem); line-height: 1.25; }
+.athlete-main h3 { font-size: clamp(1.375rem, 1.1rem + 1vw, 1.75rem); line-height: 1.4; }
+.athlete-main :is(.athlete-intro, .athlete-prose, .athlete-kicker, .athlete-discipline),
+.athlete-footer p { font-size: 1rem; line-height: 1.75; }
+.athlete-main .athlete-eyebrow,
+.athlete-footer .athlete-eyebrow,
+.athlete-main .bolt-art-label { font-size: .8125rem; letter-spacing: .12em; line-height: 1.75; }
+.athlete-main .athlete-discipline { display: block; letter-spacing: .08em; }
+.athlete-main .athlete-profile { padding: clamp(1rem, 3vw, 2rem); }
+.athlete-profile > p + p { margin-top: .5rem; }
+.athlete-profile > p:not(.athlete-eyebrow) + .athlete-eyebrow { margin-top: 1.5rem; }
+.athlete-block-stats { gap: clamp(1rem, 2.5vw, 1.75rem); }
+.athlete-block-stats > .wp-block-group { padding: clamp(1rem, 2.5vw, 1.5rem); }
+.athlete-main .athlete-stat-value,
+.athlete-main .athlete-record-value { font-family: var(--athlete-serif); color: var(--athlete-gold); line-height: 1.2; }
+.athlete-main .athlete-stat-value { font-size: clamp(2rem, 1.5rem + 2vw, 3rem); }
+.athlete-main .athlete-record-value { font-size: clamp(3rem, 2rem + 4vw, 6rem); }
+.athlete-main .bolt-record-art { min-height: 24rem; padding: clamp(1.5rem, 4vw, 2.5rem); gap: 1.5rem; }
+.athlete-main .bolt-record-art::after { content: 'ϟ'; position: absolute; right: 0; top: 0; font: 18rem/1 Georgia, serif; opacity: .08; pointer-events: none; z-index: -1; }
+.athlete-main .wp-block-buttons,
+.athlete-footer .wp-block-buttons { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+.athlete-main .wp-block-button,
+.athlete-footer .wp-block-button { max-width: 100%; }
+/* Gold / ink exceeds 4.5:1 in normal, hover and focus states. */
+:is(.athlete-main, .athlete-footer) .wp-block-button__link {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ min-height: 2.75rem;
+ box-sizing: border-box;
+ max-width: 100%;
+ padding: .875rem 1.5rem;
+ background: var(--athlete-gold);
+ color: var(--athlete-paper);
+ border: 2px solid var(--athlete-gold);
+ border-radius: .375rem;
+ font-size: 1rem;
+ line-height: 1.5;
+ text-align: center;
+ white-space: normal;
+ overflow-wrap: anywhere;
+}
+:is(.athlete-main, .athlete-footer) .wp-block-button__link:hover {
+ background: #eed6a7;
+ border-color: #eed6a7;
+ color: #141716;
+ text-decoration: underline;
+ text-underline-offset: .2em;
+}
+/* Inline links remain identifiable without relying on color. */
+.athlete-main p a,
+.athlete-footer p a { text-decoration: underline; text-underline-offset: .2em; text-decoration-thickness: .1em; }
+.athlete-main p a { display: inline-block; min-height: 1.5rem; padding-block: .25rem; }
+.athlete-header .wp-block-navigation,
+.athlete-header .wp-block-site-title { font-size: 1rem; line-height: 1.5; }
+.athlete-header .wp-block-site-title { flex: 1 1 12rem; margin: 0; }
+.athlete-header .wp-block-site-title a { display: inline-flex; align-items: center; min-height: 2.75rem; }
+.athlete-header .wp-block-navigation__container { flex-wrap: wrap; gap: .5rem 1rem; }
+.athlete-header .wp-block-navigation-item__content { display: inline-flex; align-items: center; min-height: 2.75rem; padding: .5rem; box-sizing: border-box; }
+.athlete-header .wp-block-navigation :is(button, .wp-block-navigation__responsive-container-close) { min-width: 2.75rem; min-height: 2.75rem; padding: .625rem; color: inherit; }
+.athlete-header .wp-block-navigation__responsive-container.is-menu-open { padding: clamp(1rem, 5vw, 3rem); overflow-y: auto; color: var(--athlete-ink); background: var(--athlete-paper); }
+.athlete-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container { gap: .5rem; align-items: stretch; width: 100%; }
+.athlete-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content { width: 100%; }
+.athlete-header .wp-block-navigation__responsive-dialog { padding-top: 3.5rem; }
+.athlete-header .wp-block-navigation__responsive-container-close { inset-inline-end: 0; top: 0; }
+/* Dual color focus ring remains visible on both dark and gold surfaces. */
+:is(.athlete-main, .athlete-header, .athlete-footer) :is(a, button, input, select, textarea, summary):focus-visible,
+.athlete-main:focus-visible,
+.athlete-main section[tabindex="-1"]:focus-visible {
+ outline: 3px solid #f9e4b6;
+ outline-offset: 4px;
+ box-shadow: 0 0 0 4px #141716;
+}
+.athlete-theme .skip-link:focus {
+ inset: 1rem auto auto 1rem;
+ max-width: calc(100% - 2rem);
+ min-height: 2.75rem;
+ box-sizing: border-box;
+ background: #dbc18c;
+ color: #141716;
+ white-space: normal;
+ outline: 3px solid #141716;
+ outline-offset: 3px;
+}
+.athlete-main :is(img, video, iframe) { max-width: 100%; }
+.athlete-main img { height: auto; }
+.athlete-main section[id] { scroll-margin-top: 1rem; }
+@media (max-width: 60rem) {
+ .athlete-hero-grid, .athlete-bio-grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+ .athlete-block-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .athlete-main .bolt-record-art { min-height: 18rem; }
+}
+@media (max-width: 40rem) {
+ .athlete-block-stats { grid-template-columns: minmax(0, 1fr); }
+ .athlete-header .wp-block-site-title { flex-basis: 0; }
+ .athlete-main .wp-block-buttons, .athlete-footer .wp-block-buttons { align-items: stretch; }
+ .athlete-main .wp-block-button, .athlete-footer .wp-block-button { flex: 1 1 100%; }
+ :is(.athlete-main, .athlete-footer) .wp-block-button__link { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior: auto; }
+ :is(.athlete-main, .athlete-header, .athlete-footer) *,
+ :is(.athlete-main, .athlete-header, .athlete-footer) *::before,
+ :is(.athlete-main, .athlete-header, .athlete-footer) *::after { animation: none !important; transition: none !important; }
+}
+@media (forced-colors: active) {
+ :is(.athlete-main, .athlete-footer) .wp-block-button__link { border: 2px solid ButtonText; }
+ :is(.athlete-main, .athlete-header, .athlete-footer) :focus-visible { outline: 3px solid Highlight; box-shadow: none; }
+}

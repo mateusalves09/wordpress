@@ -21,10 +21,12 @@ defined( 'ABSPATH' ) || exit;
 <p>Projeto biográfico de Perfil Olímpico</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons -->
+<div class="wp-block-buttons">
 <!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#fontes">Fontes e referências</a></div>
 <!-- /wp:button -->
 
+</div>
 <!-- /wp:buttons -->
 </div>
 <!-- /wp:group -->

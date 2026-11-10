@@ -101,3 +101,31 @@ function therapy_coach_athlete_legacy_section_redirect() {
 }
 add_action( 'template_redirect', 'therapy_coach_athlete_legacy_section_redirect' );
 remove_filter( 'document_title_parts', 'therapy_coach_athlete_document_title' );
+
+/** Estilos compartilhados pelo site e pelo editor, após os estilos do perfil. */
+function therapy_coach_accessibility_assets() {
+ $path = 'assets/css/accessibility.css';
+ wp_enqueue_style( 'therapy-coach-accessibility', get_theme_file_uri( $path ), array( 'therapy-coach-athlete' ), filemtime( get_theme_file_path( $path ) ) );
+}
+add_action( 'wp_enqueue_scripts', 'therapy_coach_accessibility_assets', 30 );
+
+function therapy_coach_accessibility_editor_styles() {
+ add_editor_style( 'assets/css/accessibility.css' );
+}
+add_action( 'after_setup_theme', 'therapy_coach_accessibility_editor_styles', 20 );
+
+/** Destinos de links internos recebem foco sem entrar na sequência de Tab. */
+function therapy_coach_accessible_group_targets( $content, $block ) {
+ $attributes = isset( $block['attrs'] ) ? $block['attrs'] : array();
+ $anchor = isset( $attributes['anchor'] ) ? $attributes['anchor'] : '';
+ $tag = isset( $attributes['tagName'] ) ? $attributes['tagName'] : '';
+ if ( ! $anchor || ! in_array( $tag, array( 'main', 'section' ), true ) ) {
+  return $content;
+ }
+ $processor = new WP_HTML_Tag_Processor( $content );
+ if ( $processor->next_tag( array( 'tag_name' => strtoupper( $tag ) ) ) ) {
+  $processor->set_attribute( 'tabindex', '-1' );
+ }
+ return $processor->get_updated_html();
+}
+add_filter( 'render_block_core/group', 'therapy_coach_accessible_group_targets', 10, 2 );

@@ -23,10 +23,6 @@ body,
 	padding: 0;
 }
 
-html,
-body {
-	overflow-x: hidden;
-}
 
 /* Hero pattern */
 .hero-image-wrap {

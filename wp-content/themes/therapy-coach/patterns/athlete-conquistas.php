@@ -15,27 +15,27 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:heading -->
 <!-- wp:group {"className":"athlete-block-stats"} -->
 <div class="wp-block-group athlete-block-stats"><!-- wp:group -->
-<div class="wp-block-group "><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">8</h3>
-<!-- /wp:heading -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"athlete-stat-value"} -->
+<p class="athlete-stat-value">8</p>
+<!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>Ouros olímpicos</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
 <!-- wp:group -->
-<div class="wp-block-group "><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">0</h3>
-<!-- /wp:heading -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"athlete-stat-value"} -->
+<p class="athlete-stat-value">0</p>
+<!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>Pratas olímpicas</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
 <!-- wp:group -->
-<div class="wp-block-group "><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">0</h3>
-<!-- /wp:heading -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"athlete-stat-value"} -->
+<p class="athlete-stat-value">0</p>
+<!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>Bronzes olímpicos</p>
 <!-- /wp:paragraph -->
@@ -45,7 +45,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:group -->
 <!-- wp:group {"className":"athlete-block-stats"} -->
 <div class="wp-block-group athlete-block-stats"><!-- wp:group -->
-<div class="wp-block-group "><!-- wp:paragraph {"className":"athlete-eyebrow"} -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"athlete-eyebrow"} -->
 <p class="athlete-eyebrow">BERLIM · 2009</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":3} -->
@@ -57,7 +57,7 @@ defined( 'ABSPATH' ) || exit;
 </div>
 <!-- /wp:group -->
 <!-- wp:group -->
-<div class="wp-block-group "><!-- wp:paragraph {"className":"athlete-eyebrow"} -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"athlete-eyebrow"} -->
 <p class="athlete-eyebrow">BERLIM · 2009</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":3} -->
@@ -69,7 +69,7 @@ defined( 'ABSPATH' ) || exit;
 </div>
 <!-- /wp:group -->
 <!-- wp:group -->
-<div class="wp-block-group "><!-- wp:paragraph {"className":"athlete-eyebrow"} -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"athlete-eyebrow"} -->
 <p class="athlete-eyebrow">LONDRES · 2012</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":3} -->
