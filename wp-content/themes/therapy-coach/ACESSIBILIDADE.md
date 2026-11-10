@@ -10,7 +10,7 @@ no WordPress precisam de avaliação própria.
   sem largura mínima que force rolagem horizontal.
 - Texto em unidades relativas, títulos fluidos, quebra de URLs e botões que
   crescem com o conteúdo, sem alturas fixas para os textos.
-- Botões dourados sobre fundo escuro, links no texto sublinhados e foco visível
+- Botões verdes sobre fundo creme, links no texto sublinhados e foco visível
   com contorno de duas cores. Controles de navegação e botões com pelo menos
   44 × 44 px na configuração padrão.
 - Cabeçalho sem sobreposição ao conteúdo; links de salto e de seções transferem
@@ -36,6 +36,8 @@ executada no Chromium com Playwright e axe-core:
 - Texto em 200% na largura de 320 px, junto com entrelinha de 1,5, espaçamento
   de letras de 0,12 em, de palavras de 0,16 em e de parágrafos de 2 em, sem
   rolagem horizontal.
+- Cliques em seis containers e no link de biografia sem contorno de foco;
+  navegação por Tab mantém o indicador visível.
 - Foco visível no modo de cores forçadas e ausência de animação com preferência
   por movimento reduzido.
 
@@ -54,3 +56,10 @@ não foram testados. Na instalação em funcionamento, conferir:
 As alterações nos arquivos do tema não substituem automaticamente modelos
 já salvos no banco. Consulte `EDITOR-DE-BLOCOS.md` antes de limpar qualquer
 personalização existente.
+
+## Identidade visual
+
+A paleta creme, verde botânico e terracota retoma a identidade do Therapy Coach.
+Os cartões usam superfícies claras, bordas suaves e cantos arredondados; o
+destaque do recorde e o rodapé usam verde profundo. As alterações visuais são
+compartilhadas pelo site e pelo editor, sem modificar o conteúdo dos blocos.

@@ -47,7 +47,7 @@
 .athlete-footer .wp-block-buttons { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
 .athlete-main .wp-block-button,
 .athlete-footer .wp-block-button { max-width: 100%; }
-/* Gold / ink exceeds 4.5:1 in normal, hover and focus states. */
+/* Contraste de texto preservado em todos os estados dos botões. */
 :is(.athlete-main, .athlete-footer) .wp-block-button__link {
  display: inline-flex;
  align-items: center;
@@ -67,9 +67,9 @@
  overflow-wrap: anywhere;
 }
 :is(.athlete-main, .athlete-footer) .wp-block-button__link:hover {
- background: #eed6a7;
- border-color: #eed6a7;
- color: #141716;
+ background: #104936;
+ border-color: #104936;
+ color: #ffffff;
  text-decoration: underline;
  text-underline-offset: .2em;
 }
@@ -89,13 +89,13 @@
 .athlete-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content { width: 100%; }
 .athlete-header .wp-block-navigation__responsive-dialog { padding-top: 3.5rem; }
 .athlete-header .wp-block-navigation__responsive-container-close { inset-inline-end: 0; top: 0; }
-/* Dual color focus ring remains visible on both dark and gold surfaces. */
+/* Foco de teclado com anel duplo visível em superfícies claras e escuras. */
 :is(.athlete-main, .athlete-header, .athlete-footer) :is(a, button, input, select, textarea, summary):focus-visible,
 .athlete-main:focus-visible,
 .athlete-main section[tabindex="-1"]:focus-visible {
- outline: 3px solid #f9e4b6;
+ outline: 3px solid #17614b;
  outline-offset: 4px;
- box-shadow: 0 0 0 4px #141716;
+ box-shadow: 0 0 0 4px #ffffff;
 }
 .athlete-theme .skip-link:focus {
  inset: 1rem auto auto 1rem;
@@ -132,4 +132,12 @@
 @media (forced-colors: active) {
  :is(.athlete-main, .athlete-footer) .wp-block-button__link { border: 2px solid ButtonText; }
  :is(.athlete-main, .athlete-header, .athlete-footer) :focus-visible { outline: 3px solid Highlight; box-shadow: none; }
+}
+
+/* Cliques e foco programático por ponteiro não desenham bordas nos containers.
+ * O foco visível do teclado permanece nos links, controles e destinos. */
+:is(.athlete-main, .athlete-header, .athlete-footer):focus:not(:focus-visible),
+:is(.athlete-main, .athlete-header, .athlete-footer) :focus:not(:focus-visible) {
+ outline: none;
+ box-shadow: none;
 }

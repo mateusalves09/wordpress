@@ -241,3 +241,60 @@ html{scroll-behavior:smooth;scroll-padding-top:100px}
 .editor-styles-wrapper{--athlete-ink:#eae6dc;--athlete-green:#dbc18c;--athlete-paper:#141716;--athlete-muted:#b0b7af;--athlete-line:#363d37;--athlete-gold:#dbc18c;--athlete-serif:AthleteDisplay,Georgia,serif}
 .editor-styles-wrapper .athlete-main,.editor-styles-wrapper .athlete-footer{background:var(--athlete-paper);color:var(--athlete-ink)}
 @media(max-width:760px){.athlete-block-stats{grid-template-columns:1fr}.athlete-header-inner{gap:16px;flex-wrap:wrap}}
+
+/* Identidade Therapy Coach: verde botânico, creme e acentos de terracota. */
+:root,
+.editor-styles-wrapper {
+ --athlete-ink: #203c32;
+ --athlete-green: #17614b;
+ --athlete-paper: #faf8f1;
+ --athlete-muted: #4d6458;
+ --athlete-line: #cad9cb;
+ --athlete-gold: #17614b;
+}
+.athlete-theme { background: var(--athlete-paper); }
+.athlete-main { background: var(--athlete-paper); color: var(--athlete-ink); }
+.athlete-header { background: #faf8f1; border-bottom-color: #dbe4d5; }
+.athlete-header .wp-block-site-title { color: #17614b; font-family: var(--athlete-serif); }
+.athlete-header .wp-block-navigation-item__content { border-radius: 999px; }
+.athlete-header .wp-block-navigation-item__content:hover { background: #e5eee1; text-decoration: underline; text-underline-offset: .25em; }
+.athlete-hero { background: radial-gradient(ellipse at 95% 10%, #dcebd7 0, transparent 60%), linear-gradient(135deg, #faf8f1, #eef3e7); border-bottom: 1px solid #dbe4d5; }
+.athlete-hero .athlete-eyebrow { width: fit-content; padding: .5rem 1rem; border: 1px solid #c4d7c0; border-radius: 999px; background: #f4f8ef; }
+.athlete-hero-copy h1 { color: #17614b; }
+.athlete-main .bolt-record-art {
+ --athlete-ink: #fff7e6;
+ --athlete-gold: #f2d7ad;
+ --athlete-muted: #dfebd9;
+ color: #fff7e6;
+ background: radial-gradient(ellipse at top right, #3c7959, transparent 70%), #17543f;
+ border-color: #17543f;
+ border-radius: 2rem 2rem 6rem 2rem;
+ box-shadow: 0 1.5rem 3rem -1.5rem #17614b55;
+}
+.athlete-main .bolt-record-art::before { border-color: #9dbb94; border-radius: 1.25rem 1.25rem 5.25rem 1.25rem; }
+.athlete-main .bolt-record-art::after { opacity: .16; }
+.athlete-main .bolt-record-art .bolt-art-label { color: #f2d7ad; }
+.athlete-block-stats > .wp-block-group { background: #ffffff; border-color: #d3dfcf; border-radius: 1.25rem; box-shadow: 0 .75rem 2rem -.75rem #203c3212; }
+.athlete-block-stats > .wp-block-group:nth-child(2) { background: #eef4e7; }
+.athlete-block-stats > .wp-block-group:nth-child(3) { background: #faeee3; }
+.athlete-main .athlete-profile { background: #e8f0e1; border-top-color: #17614b; border-radius: 1.5rem; }
+.athlete-main .athlete-section > .athlete-eyebrow { color: #94462d; }
+.athlete-main .athlete-section > h2 { max-width: 22ch; margin-bottom: 1.5rem; }
+.athlete-block-event { padding-inline-start: 1.5rem; border-inline-start: 3px solid #b5cfac; }
+.athlete-block-event > .athlete-eyebrow { width: fit-content; padding: .25rem .75rem; margin-bottom: .75rem; border-radius: 999px; background: #e5efdd; }
+.athlete-block-event > h3 { margin-bottom: .75rem; }
+.athlete-block-event:nth-child(even) { background: #f0f4e9; }
+.athlete-main #legado { padding-inline: clamp(1.25rem, 4vw, 3rem); margin-block: 1.5rem; border-radius: 2rem; background: #e5eedb; border: 1px solid #d0dfc4; }
+.athlete-main #fontes { border-top: 1px solid #d3dfcf; }
+.athlete-main #fontes p + p { margin-top: 1rem; }
+.athlete-footer {
+ --athlete-ink: #f8f5e9;
+ --athlete-paper: #153e30;
+ --athlete-muted: #d9e6d3;
+ --athlete-gold: #f2d7ad;
+ background: #153e30;
+ border-top-color: #7b9c73;
+ border-radius: 3rem 3rem 0 0;
+}
+.athlete-footer .athlete-container > p { margin-block: 1rem; }
+.athlete-footer .wp-block-heading { color: #f8f5e9; }
