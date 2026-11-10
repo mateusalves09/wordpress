@@ -5,20 +5,17 @@
  * Categories: therapy-coach
  */
 defined( 'ABSPATH' ) || exit;
-$athlete = therapy_coach_athlete_data();
-$home = home_url( '/' );
 ?>
-<!-- wp:html -->
-<div class="athlete-header">
- <div class="athlete-container athlete-header-inner">
-  <a class="athlete-brand" href="<?php echo esc_url( $home ); ?>" aria-label="Biografia olímpica — página inicial"><span class="athlete-brand-symbol" aria-hidden="true">ϟ</span><span>PERFIL<span class="athlete-brand-sub">OLÍMPICO</span></span></a>
-  <button class="athlete-menu-button" type="button" aria-expanded="false" aria-controls="athlete-navigation">Menu <span aria-hidden="true">☰</span></button>
-  <nav id="athlete-navigation" class="athlete-nav" aria-label="Navegação principal">
-   <?php foreach ( array( 'inicio' => 'Início', 'biografia' => 'Biografia', 'trajetoria' => 'Trajetória', 'conquistas' => 'Conquistas' ) as $anchor => $label ) : ?>
-    <a href="<?php echo esc_url( therapy_coach_athlete_screen_url( $anchor ) ); ?>"<?php if ( is_front_page() && therapy_coach_athlete_screen() === $anchor ) : ?> aria-current="page"<?php endif; ?>><?php echo esc_html( $label ); ?></a>
-   <?php endforeach; ?>
-   <a class="athlete-nav-feature"<?php if ( is_front_page() && 'legado' === therapy_coach_athlete_screen() ) : ?> aria-current="page"<?php endif; ?> href="<?php echo esc_url( therapy_coach_athlete_screen_url( 'legado' ) ); ?>">O legado <span aria-hidden="true">↗</span></a>
-  </nav>
- </div>
+<!-- wp:group {"className":"athlete-header"} -->
+<div class="wp-block-group athlete-header"><!-- wp:group {"className":"athlete-container athlete-header-inner"} -->
+<div class="wp-block-group athlete-container athlete-header-inner"><!-- wp:site-title /-->
+<!-- wp:navigation {"overlayMenu":"mobile","ariaLabel":"Navegação principal","layout":{"type":"flex"}} -->
+<!-- wp:navigation-link {"label":"Início","url":"<?php echo esc_url( home_url( '/' ) ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Biografia","url":"<?php echo esc_url( home_url( '/#biografia' ) ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Trajetória","url":"<?php echo esc_url( home_url( '/#trajetoria' ) ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Conquistas","url":"<?php echo esc_url( home_url( '/#conquistas' ) ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"O legado","url":"<?php echo esc_url( home_url( '/#legado' ) ); ?>","kind":"custom"} /-->
+<!-- /wp:navigation --></div>
+<!-- /wp:group -->
 </div>
-<!-- /wp:html -->
+<!-- /wp:group -->

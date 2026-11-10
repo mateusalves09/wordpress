@@ -88,3 +88,16 @@ function therapy_coach_athlete_canonical( $url ) {
  return is_front_page() ? therapy_coach_athlete_screen_url( therapy_coach_athlete_screen() ) : $url;
 }
 add_filter( 'get_canonical_url', 'therapy_coach_athlete_canonical' );
+
+/** O perfil agora usa seções nativas; mantém compatibilidade com links antigos. */
+function therapy_coach_athlete_legacy_section_redirect() {
+ if ( ! is_front_page() || ! isset( $_GET['perfil'] ) ) {
+  return;
+ }
+ $screen = therapy_coach_athlete_screen();
+ $anchor = 'inicio' === $screen ? '' : '#' . $screen;
+ wp_safe_redirect( home_url( '/' ) . $anchor, 302 );
+ exit;
+}
+add_action( 'template_redirect', 'therapy_coach_athlete_legacy_section_redirect' );
+remove_filter( 'document_title_parts', 'therapy_coach_athlete_document_title' );

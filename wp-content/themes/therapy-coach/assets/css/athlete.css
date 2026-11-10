@@ -229,3 +229,15 @@ html{scroll-behavior:smooth;scroll-padding-top:100px}
 @media(min-width:761px) and (max-width:1100px){.athlete-nav{gap:14px;font-size:11px}.athlete-nav .athlete-nav-feature{gap:14px;padding-inline:12px}}
 @media(max-width:760px){.athlete-screen-heading{padding-top:28px;padding-bottom:36px}.athlete-breadcrumb{margin-bottom:32px}.athlete-screen-heading h1{font-size:42px}.athlete-screen-cards{grid-template-columns:1fr;gap:14px}.athlete-screen-card{padding:26px}.athlete-screen-card h3{font-size:27px;margin-top:22px}.athlete-share{align-items:flex-start;flex-direction:column}.athlete-faq summary{font-size:14px}.athlete-filters{gap:8px}.athlete-filters button{padding:10px 14px}}
 @media(prefers-reduced-motion:reduce){.athlete-screen-card{transition:none}.athlete-screen-card:hover{transform:none}}
+
+/* Blocos nativos: as mesmas seções podem ser reorganizadas no Editor do site. */
+.athlete-block-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;padding-block:32px}
+.athlete-block-stats>.wp-block-group{padding:24px;border:1px solid var(--athlete-line)}
+.athlete-block-event{padding:28px 0;border-bottom:1px solid var(--athlete-line)}
+.athlete-main .wp-block-heading,.athlete-footer .wp-block-heading{color:var(--athlete-ink);font-family:var(--athlete-serif)}
+.athlete-header .wp-block-navigation{color:var(--athlete-ink);font-size:13px}
+.athlete-header .wp-block-site-title{font-size:18px;color:var(--athlete-gold)}
+.athlete-header .wp-block-navigation__responsive-container.is-menu-open{background:var(--athlete-paper);color:var(--athlete-ink)}
+.editor-styles-wrapper{--athlete-ink:#eae6dc;--athlete-green:#dbc18c;--athlete-paper:#141716;--athlete-muted:#b0b7af;--athlete-line:#363d37;--athlete-gold:#dbc18c;--athlete-serif:AthleteDisplay,Georgia,serif}
+.editor-styles-wrapper .athlete-main,.editor-styles-wrapper .athlete-footer{background:var(--athlete-paper);color:var(--athlete-ink)}
+@media(max-width:760px){.athlete-block-stats{grid-template-columns:1fr}.athlete-header-inner{gap:16px;flex-wrap:wrap}}
