@@ -1,0 +1,147 @@
+/*
+Theme Name: Spider Biografia
+Description: Biografia bilíngue de Anderson Silva com blocos nativos do Gutenberg.
+Version: 1.0.0
+Requires at least: 6.6
+Requires PHP: 7.4
+Text Domain: spider-biografia
+*/
+
+.spider-site {
+	--spider-black: #0d0d0d;
+	--spider-gold: #ffd700;
+	--spider-white: #fff;
+	--spider-muted: #d0ceca;
+	--spider-panel: #1b1b1b;
+	--spider-border: #838383;
+	--spider-width: 72rem;
+	background: var(--spider-black);
+	color: var(--spider-white);
+	font-family: system-ui, sans-serif;
+	line-height: 1.6;
+	overflow-wrap: anywhere;
+}
+
+.spider-site :where(h1, h2, h3, p, figure, dl) { margin: 0; }
+.spider-site :where(h1, h2, h3) { line-height: 1.12; text-wrap: balance; }
+.spider-site [hidden] { display: none !important; }
+.spider-site a { color: var(--spider-gold); text-underline-offset: .22em; }
+.spider-site :focus-visible {
+	outline: 3px solid var(--spider-white);
+	outline-offset: 3px;
+	box-shadow: 0 0 0 3px var(--spider-black);
+}
+.spider-site :where(button, a, input) { scroll-margin-block: 1rem; }
+.spider-site :where(.spider-bar, .spider-section, .spider-footer, .spider-hero-inner) {
+	box-sizing: border-box;
+	width: min(100%, var(--spider-width));
+	margin-inline: auto;
+	padding-inline: clamp(1rem, 4vw, 3rem);
+}
+.spider-site .spider-skip {
+	position: fixed;
+	inset: .5rem auto auto 1rem;
+	z-index: 100000;
+	transform: translateY(-250%);
+}
+.spider-site .spider-skip:focus { transform: none; }
+.spider-bar, .spider-nav, .spider-controls { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.25rem; }
+.spider-bar { justify-content: space-between; padding-block: .85rem; }
+.spider-nav a, .spider-source { display: inline-flex; align-items: center; min-height: 2.75rem; }
+.spider-brand { font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
+.spider-brand a { text-decoration: none; }
+.spider-hero {
+	position: relative;
+	isolation: isolate;
+	background: radial-gradient(ellipse at 75% 30%, #463716, transparent 66%), var(--spider-black);
+	border-block: 1px solid var(--spider-border);
+}
+.spider-site .spider-hero .spider-hero-image {
+	position: absolute;
+	inset: 0;
+	z-index: -2;
+	overflow: hidden;
+	margin: 0;
+}
+.spider-site .spider-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: 68% center; }
+.spider-hero::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: linear-gradient(90deg, rgba(0, 0, 0, .88), rgba(0, 0, 0, .64));
+}
+.spider-hero-inner { display: grid; justify-items: start; align-content: center; gap: 1.2rem; min-height: 33rem; padding-block: clamp(4rem, 13vw, 9rem); }
+.spider-site h1 { font-size: clamp(2.8rem, 9vw, 7.5rem); font-weight: 950; letter-spacing: -.07em; text-transform: uppercase; }
+.spider-site h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -.04em; }
+.spider-site h3 { font-size: clamp(1.3rem, 3vw, 2rem); }
+.spider-hero-inner > p { max-width: 42ch; }
+.spider-kicker { color: var(--spider-gold); font-size: .875rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.spider-site :where(.spider-cta a, .spider-skip, button) {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	min-width: 2.75rem;
+	min-height: 2.75rem;
+	padding: .55rem 1rem;
+	border: 1px solid var(--spider-gold);
+	border-radius: .25rem;
+	background: var(--spider-gold);
+	color: var(--spider-black);
+	font: inherit;
+	font-weight: 750;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+.spider-site .spider-controls button { background: var(--spider-black); color: var(--spider-white); border-color: var(--spider-border); }
+.spider-site .spider-controls button[aria-selected="true"],
+.spider-site .spider-controls button[aria-current="step"] {
+	background: var(--spider-gold);
+	color: var(--spider-black);
+	border-color: var(--spider-gold);
+	text-decoration: underline;
+}
+.spider-section { padding-block: clamp(2.8rem, 7vw, 5.5rem); border-bottom: 1px solid var(--spider-border); }
+.spider-site :where(.spider-section, .spider-card, .spider-quiz) > * + * { margin-block-start: 1rem; }
+.spider-section > p, .spider-card > p { max-width: 68ch; color: var(--spider-muted); }
+.spider-card, .spider-stat, .spider-quiz fieldset {
+	padding: clamp(1rem, 3vw, 2rem);
+	background: var(--spider-panel);
+	border: 1px solid var(--spider-border);
+	border-radius: .4rem;
+	min-width: 0;
+}
+.spider-site .spider-card { margin-block: 1rem 0; }
+.spider-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: 1rem; }
+.spider-stat strong { display: block; color: var(--spider-gold); font-size: clamp(2.75rem, 8vw, 4.5rem); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.spider-spoken { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.spider-quiz label { display: flex; align-items: center; gap: .65rem; min-height: 2.75rem; cursor: pointer; }
+.spider-quiz input { flex: none; width: 1.2rem; height: 1.2rem; accent-color: var(--spider-gold); }
+.spider-quiz legend { max-width: 100%; font-weight: 800; }
+.spider-quiz output { display: block; }
+.spider-footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 1.5rem; color: var(--spider-muted); }
+.spider-site .spider-style-image img { width: 100%; max-width: 32rem; height: auto; border-radius: .25rem; }
+
+@media (max-width: 36rem) {
+	.spider-hero-inner { min-height: 25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+	.spider-site *, .spider-site *::before, .spider-site *::after {
+		animation: none !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
+}
+@media (forced-colors: active) {
+	.spider-site :focus-visible { outline-color: Highlight; }
+	.spider-site .spider-controls button:is([aria-selected="true"], [aria-current="step"]) { border: 2px solid Highlight; }
+}
+
+/* Anchor colors take precedence over the base gold link treatment. */
+.spider-site .spider-cta a,
+.spider-site .spider-skip { color: var(--spider-black); }
+
+.spider-site .spider-content:focus,
+.spider-site .spider-locale:focus { outline-offset: -3px; }
