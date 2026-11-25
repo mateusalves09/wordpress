@@ -147,7 +147,7 @@
 <!-- wp:group {"layout":{"type":"default"},"className":"spider-stat"} -->
 <div class="wp-block-group spider-stat">
 <!-- wp:paragraph -->
-<p><strong>4</strong> Wins by submission</p>
+<p><strong>3</strong> Wins by submission</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
